@@ -1033,8 +1033,8 @@ debug:
 	$(foreach v, $(.VARIABLES), $(info $(v)=$($(v))))
 
 uninstall-hook:
-	rm -d $(datarootdir)/$(PACKAGE)/data
-	rm -d $(datarootdir)/$(PACKAGE)
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)/data
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

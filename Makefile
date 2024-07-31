@@ -272,12 +272,12 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} '/home/odroid/PolyITAN/DevOps/build-aux/missing' aclocal-1.16
+ACLOCAL = ${SHELL} '/home/odroid/DevOps/build-aux/missing' aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} '/home/odroid/PolyITAN/DevOps/build-aux/missing' autoconf
-AUTOHEADER = ${SHELL} '/home/odroid/PolyITAN/DevOps/build-aux/missing' autoheader
-AUTOMAKE = ${SHELL} '/home/odroid/PolyITAN/DevOps/build-aux/missing' automake-1.16
+AUTOCONF = ${SHELL} '/home/odroid/DevOps/build-aux/missing' autoconf
+AUTOHEADER = ${SHELL} '/home/odroid/DevOps/build-aux/missing' autoheader
+AUTOMAKE = ${SHELL} '/home/odroid/DevOps/build-aux/missing' automake-1.16
 AWK = mawk
 CPPFLAGS = 
 CSCOPE = cscope
@@ -302,7 +302,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} '/home/odroid/PolyITAN/DevOps/build-aux/missing' makeinfo
+MAKEINFO = ${SHELL} '/home/odroid/DevOps/build-aux/missing' makeinfo
 MKDIR_P = /usr/bin/mkdir -p
 OBJEXT = o
 PACKAGE = aztec
@@ -317,10 +317,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.1
-abs_builddir = /home/odroid/PolyITAN/DevOps
-abs_srcdir = /home/odroid/PolyITAN/DevOps
-abs_top_builddir = /home/odroid/PolyITAN/DevOps
-abs_top_srcdir = /home/odroid/PolyITAN/DevOps
+abs_builddir = /home/odroid/DevOps
+abs_srcdir = /home/odroid/DevOps
+abs_top_builddir = /home/odroid/DevOps
+abs_top_srcdir = /home/odroid/DevOps
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
@@ -339,7 +339,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/odroid/PolyITAN/DevOps/build-aux/install-sh
+install_sh = ${SHELL} /home/odroid/DevOps/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1033,8 +1033,8 @@ debug:
 	$(foreach v, $(.VARIABLES), $(info $(v)=$($(v))))
 
 uninstall-hook:
-	rm -d $(datarootdir)/$(PACKAGE)/data
-	rm -d $(datarootdir)/$(PACKAGE)
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)/data
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

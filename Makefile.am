@@ -28,5 +28,6 @@ debug:
 	$(foreach v, $(.VARIABLES), $(info $(v)=$($(v))))
 
 uninstall-hook:
-	rm -d $(datarootdir)/$(PACKAGE)/data
-	rm -d $(datarootdir)/$(PACKAGE)
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)/data
+	rm -d $(DESTDIR)$(datarootdir)/$(PACKAGE)
+
