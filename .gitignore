@@ -1,3 +1,7 @@
+# temp m4
+autom4te.cache/
+.deps/
+
 # Prerequisites
 *.d
 
